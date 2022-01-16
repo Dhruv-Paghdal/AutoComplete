@@ -1,0 +1,20 @@
+#result {
+	border: 1px dotted #ccc;
+	padding: 3px;
+	visibility: hidden;
+}
+
+#pname{
+	color: black;
+	font-size: 18px;
+	font-weight: 550;
+}
+
+.position{
+	font-size: 15px;
+	font-weight: 500;
+}
+
+#result div table:hover {
+	background: #eee;
+} 
