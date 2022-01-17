@@ -12,13 +12,15 @@
     <div class="container">
         <h1 class="text-center">Auto Complete Using JavaScript</h1>
         <hr>
-        <h3>Search Patients : </h3>
+        <h3 >Search Patients : </h3>
         <form autocomplete="off">
-          <input type="text" class="w-100" name="q" id="q" onkeyup="showResults(this.value)" />
-          <div id="result"></div>
+          <input type="text" class="w-100" name="q" id="q" onkeyup="showResults(this.value)" onkeydown="uniKeyCode(event)"/>
+          <div id="result" ></div>
         </form>
     </div>
 </body>
 <link rel="stylesheet" href="index.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.keyscroll.js"></script>
 <script src="index.js"></script>
 </html>

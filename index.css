@@ -15,6 +15,15 @@
 	font-weight: 500;
 }
 
-#result div table:hover {
-	background: #eee;
-} 
+.view{
+	border: 1px solid transparent;
+}
+
+.accordion {
+	border: 1px solid #ccc;
+}
+
+.editing
+{
+	background-color: #eee;
+}

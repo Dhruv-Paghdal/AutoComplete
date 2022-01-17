@@ -95,7 +95,7 @@ function autocompleteMatch(input) {
 	  }
   });
 }
- 
+
 function showResults(val) {
   let res = document.getElementById("result");
   let green=" text-success";
@@ -106,7 +106,24 @@ function showResults(val) {
   let newValue=val.toLowerCase();
   let terms = autocompleteMatch(newValue);
   for (let i=0; i<terms.length; i++) {
-    table += '<table class="my-4"><tr><td rowspan="2"><img src= "' + terms[i].image + '"/></td><td id="pname">'+terms[i].name+'</td><td rowspan="2" class="position px-5 '+`${terms[i].position==='New'?red:green}`+ '">'+terms[i].position+'</tr></td><tr><td>'+" | "+terms[i].age+" | "+terms[i].gender+" | "+terms[i].mobileNumber+" | "+terms[i].city+'</td></tr></table>';
+    table += '<table class="view my-4"><tr><td rowspan="2"><img src= "' + terms[i].image + '"/></td><td id="pname">'+terms[i].name+'</td><td rowspan="2" class="position px-5 '+`${terms[i].position==='New'?red:green}`+ '">'+terms[i].position+'</tr></td><tr><td>'+" | "+terms[i].age+" | "+terms[i].gender+" | "+terms[i].mobileNumber+" | "+terms[i].city+'</td></tr></table>';
   }
   res.innerHTML = '<div>' + table + '</div>';
+
+  $(document).ready(function() {
+    $('div#result').keyscroll();
+  });
 }
+
+function uniKeyCode(event) {
+  var key = event.which || event.keyCode; 
+  if(key==38||key==40){
+    console.log(key);
+    document.getElementById("q").blur();
+    document.getElementById("result").focus();
+  }
+}
+
+
+
+// 38,40
