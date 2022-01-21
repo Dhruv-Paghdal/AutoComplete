@@ -1,2 +1,2 @@
 # AutoComplete
-* An autocomplete system developed using Vanilla JS. 
+* An autocomplete system developed using Pure JS. 
